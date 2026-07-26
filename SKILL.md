@@ -49,11 +49,13 @@ Any team collaboration scenario where you need to pull someone else's changes fr
    - Is it `main`, `develop`, `release`, or something else?
    - Does the target branch already contain the changes they need?
 
-Open in Chinese with a message like:
+Ask one question at a time. First:
 
-> 我来帮你同步分支。先确认两个事情：
-> 1. 你当前在哪个分支？（运行 `git branch` 看一下）
-> 2. 要跟哪个分支同步？默认是 `main`，还是 `develop`、`release` 其他的？
+> 你当前在哪个分支？（运行 `git branch` 看一下）
+
+After the user replies, then ask:
+
+> 要跟哪个分支同步？默认是 `main`，还是其他的？
 
 ## Quick start
 

@@ -2,10 +2,12 @@
 
 Sync your current feature branch with `main` (or any target branch) in one shot.
 
-## Before using — ALWAYS ask the user (in Chinese)
+## Before using — ALWAYS ask (in Chinese, one at a time)
 
-Ask in Chinese:
-> 你当前在哪个分支？要跟哪个分支同步？（默认 main）
+Ask questions one by one, wait for the user's reply before asking the next:
+
+1. "你当前在哪个分支？"
+2. After reply → "要跟哪个分支同步？默认 main"
 
 ## Usage
 
