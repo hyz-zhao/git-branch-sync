@@ -1,6 +1,6 @@
 ---
 name: git-branch-sync
-description: Git Branch Sync Skill — sync your current feature branch with main (or any target branch) in one shot. Automatically saves uncommitted changes, switches to the target branch, pulls latest, and merges back. Use when users ask "sync branch", "merge main", "update feature branch", "pull latest from main", or any branch-sync workflow in team collaboration.
+description: Git Branch Sync Skill — sync your current feature branch with main (or any target branch) in one shot. Automatically saves uncommitted changes, switches to the target branch, pulls latest, and merges back. Use when users ask "sync branch", "sync code", "merge main", "update feature branch", "pull latest from main", "同步分支", "同步代码", "帮我同步", "合并主分支", "拉取最新代码", or any branch-sync workflow in team collaboration.
 ---
 
 # git-branch-sync — Git Branch Sync Skill
