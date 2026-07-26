@@ -39,6 +39,22 @@ Any team collaboration scenario where you need to pull someone else's changes fr
 - **Pre-PR update**: before opening a PR, make sure your branch has the latest `main`
 - **Long-lived branches**: periodically sync a long-running feature branch to reduce merge conflicts
 
+## Before you use — ALWAYS ask
+
+**Do not run the sync until you confirm two things with the user.**
+
+1. **Current branch.** Which branch are they on? This is the branch that will receive the merged code.
+   - If unsure, ask them to run `git branch` or `git rev-parse --abbrev-ref HEAD`.
+2. **Target branch.** Which branch do they want to sync with? Default is `main`, but confirm:
+   - Is it `main`, `develop`, `release`, or something else?
+   - Does the target branch already contain the changes they need?
+
+Open in Chinese with a message like:
+
+> 我来帮你同步分支。先确认两个事情：
+> 1. 你当前在哪个分支？（运行 `git branch` 看一下）
+> 2. 要跟哪个分支同步？默认是 `main`，还是 `develop`、`release` 其他的？
+
 ## Quick start
 
 ```bash
