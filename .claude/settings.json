@@ -1,0 +1,16 @@
+{
+  "skills": [
+    {
+      "name": "sync-branch",
+      "description": "Git 分支同步 — 将当前特性分支与 main（或其他目标分支）同步",
+      "command": "bash \"${workspaceFolder}/git-sync-branch.sh\"",
+      "args": []
+    }
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(chmod +x *)"
+    ]
+  }
+}

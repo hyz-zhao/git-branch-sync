@@ -1,0 +1,37 @@
+---
+description: "Git Branch Sync Skill — one-shot sync your feature branch with main (or any target). Handles uncommitted changes, switches branches, pulls latest, and merges back. Use when users ask 'sync branch', 'merge main', 'update feature branch', 'pull main changes'."
+globs: "*"
+---
+
+# git-branch-sync — Git Branch Sync
+
+## What it does
+Syncs your current feature branch with `main` (or any target branch). Useful when a teammate merged to `main` and you need those changes in your feature branch.
+
+## Usage
+```bash
+# Sync with main (default)
+bash /d/User/Desktop/GithubProject/skill/git-branch-sync/git-sync-branch.sh
+
+# Sync with a specific branch
+bash /d/User/Desktop/GithubProject/skill/git-branch-sync/git-sync-branch.sh develop
+```
+
+## Pipeline
+1. **Handle uncommitted changes** — prompted: auto-commit(1) / custom commit(2) / stash(3) / abort(4)
+2. **Switch & pull** — `git checkout main && git pull origin main`
+3. **Merge back** — `git checkout bb && git merge main`
+4. **Restore stash** — auto `git stash pop` after successful merge
+
+## Conflict resolution
+Script stops and lists conflicted files on merge conflict:
+```bash
+# After editing conflicted files:
+git add <file>
+git commit
+```
+
+## Team scenario
+- Dev A on `aa` branch → merges to `main`
+- Dev B on `bb` branch → runs this script → pulls A's code automatically
+- Conflicting edits are surfaced for manual resolution
